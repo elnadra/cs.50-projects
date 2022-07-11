@@ -141,5 +141,4 @@ char vigenere_char = VigenereText(symbol_text , key_symbol);
 counter_for_caesartext++;
 printf("%c", vigenere_char);
 }
-return 0;
 }
