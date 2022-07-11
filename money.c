@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <stdio.h>
 
 int TransferDollars(float Dollars) {
@@ -38,5 +37,5 @@ int main(void) {
     Dollar_10 = dSum_10(DollarAll , Dollar_25);
     Dollar_5 = dSum_5(DollarAll , Dollar_25 , Dollar_10);
     Dollar_1 = dSum_1(DollarAll , Dollar_25 , Dollar_10 , Dollar_5);
-    printf("%i монет по 25 пенсов, %i монет по 10 пенсов, %i монет по 5 пенсов, %i монет по 1 пенс\", Dollar_25 , Dollar_10 , Dollar_5 , Dollar_1);
+    printf("%i монет по 25 пенсов, %i монет по 10 пенсов, %i монет по 5 пенсов, %i монет по 1 пенс\n", Dollar_25 , Dollar_10 , Dollar_5 , Dollar_1);
 }
