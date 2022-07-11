@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define ARRAY_SIZE 512
+#define ARRAY_SIZE 1000
 
 char uppers(char sumb) {
 if(sumb >= 97 && sumb < 123) {
