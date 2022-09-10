@@ -1,0 +1,36 @@
+{
+
+    //Checking incoming values. IF there are not two or three arguments, then an error is returned
+    if (argc != 2 && argc != 3)
+    {
+        printf("Usage: generate n [s]\n");
+        return 1;
+    }
+ 
+    //Extracting the number of random numbers into a separate variable using the atoi function
+    int n = atoi(argv[1]);
+
+
+    //If there are two arguments, then the function is supplied with the value of the second argument equated to long int
+    //Else, the TIME value equated to long int is supplied to srand48 - the system time
+    if (argc == 3)
+    {
+        srand48((long int) atoi(argv[2]));
+    }
+    else
+    {
+        srand48((long int) time(NULL));
+    }
+
+ 
+    //Output of numbers using the for loop. Variable N is the number of numbers
+    //The result of drand48 is multiplied by a constant to increase the boundary of the values of pseudorandom numbers
+    //The value is equated to int because drand48 returns double
+    for (int i = 0; i < n; i++)
+    {
+        printf("%i\n", (int) (drand48() * LIMIT));
+    }
+
+    // success
+    return 0;
+}
