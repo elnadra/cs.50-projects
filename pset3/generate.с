@@ -1,5 +1,14 @@
-{
+#define _XOPEN_SOURCE
 
+#include <cs50.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define LIMIT 65536
+
+int main(int argc, string argv[])
+{
     //Checking incoming values. IF there are not two or three arguments, then an error is returned
     if (argc != 2 && argc != 3)
     {
