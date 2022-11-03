@@ -1,0 +1,36 @@
+
+#include <cs50.h>
+#include "helpers.h"
+
+bool search(int value, int values[], int n) {
+   if(n <= 0) {
+    return false;
+}
+int counter = 0;
+while(counter < n) {
+    if(values[counter] == value) {
+        return true;
+    }
+counter++;
+}
+return false;
+}
+
+void sort(int values[], int n) {
+    if(n < 2) {
+     return;
+}
+int IsSorted = 1;
+int ArrayValue;
+    while(!IsSorted) {
+    IsSorted = 0;
+    for(int counter = 0; counter < n; counter++) {
+        if(values[counter] > values[counter + 1]) {
+            ArrayValue = values[counter];
+            values[counter] = values[counter + 1];
+            values[counter + 1] = ArrayValue;
+        IsSorted = 1;
+    }
+   }
+  }
+ }
