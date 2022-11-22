@@ -1,7 +1,19 @@
+/**
+ * helpers.c
+ *
+ * Computer Science 50
+ * Problem Set 3
+ *
+ * Helper functions for Problem Set 3.
+ */
 
 #include <cs50.h>
+
 #include "helpers.h"
 
+/**
+ * Returns true if value is in array of n values, else false.
+ */
 bool search(int value, int values[], int n) {
    if(n <= 0) {
     return false;
@@ -20,17 +32,18 @@ void sort(int values[], int n) {
     if(n < 2) {
      return;
 }
-int IsSorted = 1;
+int IsSorted = 0;
 int ArrayValue;
     while(!IsSorted) {
-    IsSorted = 0;
+    IsSorted = 1;
     for(int counter = 0; counter < n; counter++) {
         if(values[counter] > values[counter + 1]) {
             ArrayValue = values[counter];
             values[counter] = values[counter + 1];
             values[counter + 1] = ArrayValue;
-        IsSorted = 1;
+        IsSorted = 0;
     }
    }
   }
  }
+   
